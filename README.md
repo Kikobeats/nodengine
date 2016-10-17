@@ -57,7 +57,7 @@ chpwd () {
 
   if [ -f $FILE ];
   then
-     nodengine
+     installedVersion=$(nodengine | tail -n 1) && nvm use $installedVersion
   fi
 }
 ```  
