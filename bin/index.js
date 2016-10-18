@@ -48,7 +48,7 @@ config(function (versions) {
     if (switcherBin) {
       var switcherProcess = switcher(switcherBin)
 
-      switcherProcess.on('close', function(code) {
+      switcherProcess.on('close', function (code) {
         if (code === 0) {
           console.log(maxSatisfyVersion)
         }
