@@ -45,7 +45,7 @@ Manual switching can be avoided.  Add the following below to your environment de
 ```bash
 echo "\nchpwd () {\n nodengine\n}" >> ~/.zshrc
 ```
-### Bash
+### Bash (with other version manager than NVM)
 
 ```bash
 # Enable nodengine autoswitching
@@ -60,7 +60,29 @@ chpwd () {
      nodengine
   fi
 }
-```  
+``` 
+
+### Bash and NVM
+
+There is a problem when using NVM and bash where your current shell isn't updated when a new version is selected/installed.
+You should do the following to fix this problem:
+
+```bash
+# Enable nodengine autoswitching
+cd () { builtin cd "$@" && chpwd; }
+pushd () { builtin pushd "$@" && chpwd; }
+popd () { builtin popd "$@" && chpwd; }
+chpwd () {
+  FILE=$PWD/package.json
+
+  if [ -f $FILE ];
+  then
+    # With NVM, nodengine returns the selected/installed version so that we can use it
+    # to force select the version to use in the current shell
+    installedVersion=$(nodengine | tail -n 1) && [ -n "$installedVersion" ] && nvm use $installedVersion
+  fi
+}
+``` 
 
 ## License
 

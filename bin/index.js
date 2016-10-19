@@ -45,6 +45,16 @@ config(function (versions) {
   }
 
   async.doWhilst(getBin, whileCondition, function () {
-    if (switcherBin) return switcher(switcherBin)
+    if (switcherBin) {
+      var switcherProcess = switcher(switcherBin)
+
+      switcherProcess.on('close', function (code) {
+        if (code === 0) {
+          console.log(maxSatisfyVersion)
+        }
+      })
+
+      return switcherProcess
+    }
   })
 })
