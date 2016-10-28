@@ -40,27 +40,25 @@ It will use the highest version that satisfies the range.
 ## Automatic switching
 Manual switching can be avoided.  Add the following below to your environment depending on your shell choice.
 
-### Zsh
+### Zsh and Bash
 
-```bash
-echo "\nchpwd () {\n nodengine\n}" >> ~/.zshrc
-```
-### Bash
-
-```bash
+```shell
 # Enable nodengine autoswitching
-cd () { builtin cd "$@" && chpwd; }
-pushd () { builtin pushd "$@" && chpwd; }
-popd () { builtin popd "$@" && chpwd; }
-chpwd () {
-  FILE=$PWD/package.json
+if hash nodengine 2>/dev/null; then
+  function cd () { builtin cd "$@" && chpwd; }
+  pushd () { builtin pushd "$@" && chpwd; }
+  popd () { builtin popd "$@" && chpwd; }
+  function chpwd () {
+    FILE=$PWD/package.json
 
-  if [ -f $FILE ];
-  then
-     nodengine
-  fi
-}
-```  
+    if [ -f $FILE ] && [ "$LAST_NODENGINE_DIR" != "$PWD" ]; then
+      nodengine
+      builtin echo "changed to node $(node --version)"
+      LAST_NODENGINE_DIR="$PWD"
+    fi
+  }
+fi
+```
 
 ## License
 
