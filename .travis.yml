@@ -1,5 +1,7 @@
 language: node_js
 node_js:
-  - "stable"
-  - "5"
-  - "4"
+  - stable
+  - '5'
+  - '4'
+  - '6'
+  - '7'
