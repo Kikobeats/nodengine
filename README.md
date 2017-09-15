@@ -44,11 +44,7 @@ Enabling automatic switching consist in a little shell script for check if `pack
 Add the follow snippet in a file loaded by your shell agent, for example, `.extra`.
 
 ```bash
-cd () { builtin cd "$@" && chpwd; }
-pushd () { builtin pushd "$@" && chpwd; }
-popd () { builtin popd "$@" && chpwd; }
-
-chpwd () {
+function chpwd() {
   local PKG
   PKG=$PWD/package.json
   if [ -f "$PKG" ] && [ "$NODENGINE_LAST_DIR" != "$PWD" ]; then
@@ -57,6 +53,10 @@ chpwd () {
     NODENGINE_LAST_DIR=$PWD
   fi
 }
+
+function cd() { builtin cd "$@" && chpwd; }
+function pushd() { builtin pushd "$@" && chpwd; }
+function popd() { builtin popd "$@" && chpwd; }
 ```
 
 ## Fetching new versions
