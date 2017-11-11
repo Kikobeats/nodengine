@@ -1,5 +1,7 @@
 # nodengine
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Kikobeats/nodengine.svg)](https://greenkeeper.io/)
+
 <p align="center">
   <br>
   <img src="http://g.recordit.co/pMGKmq4ycR.gif" alt="demo">
