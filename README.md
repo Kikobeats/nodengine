@@ -1,11 +1,20 @@
 # nodengine
 
-<p align="center">
+<h1 align="center">
   <br>
-  <img src="http://g.recordit.co/pMGKmq4ycR.gif" alt="demo">
+  <img src="http://g.recordit.co/pMGKmq4ycR.gif" alt="nodengine">
+  <br>
+  Automatic NodeJS version switcher
   <br>
   <br>
-</p>
+</h1>
+
+<p align="center"><img src="https://img.shields.io/github/tag/Kikobeats/nodengine.svg?style=flat-square" alt="Last version">
+<a href="https://travis-ci.org/Kikobeats/nodengine"><img src="http://img.shields.io/travis/Kikobeats/nodengine/master.svg?style=flat-square" alt="Build Status"></a>
+<a href="https://david-dm.org/Kikobeats/nodengine"><img src="http://img.shields.io/david/Kikobeats/nodengine.svg?style=flat-square" alt="Dependency status"></a>
+<a href="https://david-dm.org/Kikobeats/nodengine#info=devDependencies"><img src="http://img.shields.io/david/dev/Kikobeats/nodengine.svg?style=flat-square" alt="Dev Dependencies Status"></a>
+<a href="https://www.npmjs.org/package/nodengine"><img src="http://img.shields.io/npm/dm/nodengine.svg?style=flat-square" alt="NPM Status"></a>
+<a href="https://paypal.me/Kikobeats"><img src="https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square" alt="Donate"></a></p>
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/nodengine.svg?style=flat-square)
 [![Build Status](http://img.shields.io/travis/Kikobeats/nodengine/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/nodengine)
@@ -14,7 +23,9 @@
 [![NPM Status](http://img.shields.io/npm/dm/nodengine.svg?style=flat-square)](https://www.npmjs.org/package/nodengine)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
-> NodeJS switcher based on node version declared in `package.json`.
+> Psss! Follow our [@nodengine](https://twitter.com/nodengine) bot for know about the next node release
+
+**nodengine** is an automatic NodeJS switcher based on node version declared in `package.json`.
 
 It needs a global version manager as [n](https://www.npmjs.com/package/n) or [nvm](https://www.npmjs.com/package/nvm).
 
