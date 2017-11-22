@@ -16,13 +16,6 @@
 <a href="https://www.npmjs.org/package/nodengine"><img src="http://img.shields.io/npm/dm/nodengine.svg?style=flat-square" alt="NPM Status"></a>
 <a href="https://paypal.me/Kikobeats"><img src="https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square" alt="Donate"></a></p>
 
-![Last version](https://img.shields.io/github/tag/Kikobeats/nodengine.svg?style=flat-square)
-[![Build Status](http://img.shields.io/travis/Kikobeats/nodengine/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/nodengine)
-[![Dependency status](http://img.shields.io/david/Kikobeats/nodengine.svg?style=flat-square)](https://david-dm.org/Kikobeats/nodengine)
-[![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/nodengine.svg?style=flat-square)](https://david-dm.org/Kikobeats/nodengine#info=devDependencies)
-[![NPM Status](http://img.shields.io/npm/dm/nodengine.svg?style=flat-square)](https://www.npmjs.org/package/nodengine)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
-
 > Psss! Follow our [@nodengine](https://twitter.com/nodengine) bot for know about the next node release
 
 **nodengine** is an automatic NodeJS switcher based on node version declared in `package.json`.
