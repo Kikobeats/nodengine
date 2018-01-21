@@ -1,3 +1,22 @@
+<a name="3.2.3"></a>
+## 3.2.3 (2018-01-21)
+
+* fix(package): update async to version 2.6.0 ([801beff](https://github.com/kikobeats/nodengine/commit/801beff))
+* fix(package): update meow to version 4.0.0 ([6a01d3f](https://github.com/kikobeats/nodengine/commit/6a01d3f))
+* fix(package): update semver to version 5.5.0 ([e3c9bc0](https://github.com/kikobeats/nodengine/commit/e3c9bc0))
+* fix(package): update simple-get to version 2.7.0 ([d5d7f70](https://github.com/kikobeats/nodengine/commit/d5d7f70))
+* fix(package): update update-notifier to version 2.3.0 ([5e94178](https://github.com/kikobeats/nodengine/commit/5e94178))
+* Fixes #32 - error prone zsh syntax ([6e2cf95](https://github.com/kikobeats/nodengine/commit/6e2cf95)), closes [#32](https://github.com/kikobeats/nodengine/issues/32)
+* Update README.md ([7e49ceb](https://github.com/kikobeats/nodengine/commit/7e49ceb))
+* Update README.md ([8b7eaad](https://github.com/kikobeats/nodengine/commit/8b7eaad))
+* Update README.md ([d2a2426](https://github.com/kikobeats/nodengine/commit/d2a2426))
+* Update README.md ([f3227da](https://github.com/kikobeats/nodengine/commit/f3227da))
+* Update README.md ([a6a1171](https://github.com/kikobeats/nodengine/commit/a6a1171))
+* Update README.md ([9ed4245](https://github.com/kikobeats/nodengine/commit/9ed4245))
+* docs(readme): add Greenkeeper badge ([6c1c236](https://github.com/kikobeats/nodengine/commit/6c1c236))
+
+
+
 <a name="3.2.2"></a>
 ## 3.2.2 (2017-08-16)
 
