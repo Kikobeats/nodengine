@@ -1,3 +1,18 @@
+<a name="3.2.4"></a>
+## 3.2.4 (2018-10-11)
+
+* Add files metadata ([eef8d43](https://github.com/kikobeats/nodengine/commit/eef8d43))
+* Fix linter ([01b12b3](https://github.com/kikobeats/nodengine/commit/01b12b3))
+* Update Travis builds ([8a52d00](https://github.com/kikobeats/nodengine/commit/8a52d00))
+* fix(package): update configstore to version 4.0.0 ([f59095b](https://github.com/kikobeats/nodengine/commit/f59095b))
+* fix(package): update meow to version 5.0.0 ([6c00b76](https://github.com/kikobeats/nodengine/commit/6c00b76))
+* fix(package): update semver to version 5.6.0 ([65e7460](https://github.com/kikobeats/nodengine/commit/65e7460))
+* fix(package): update simple-get to version 3.0.0 ([5f7904c](https://github.com/kikobeats/nodengine/commit/5f7904c))
+* fix(package): update update-notifier to version 2.4.0 ([cb5f685](https://github.com/kikobeats/nodengine/commit/cb5f685))
+* fix(package): update update-notifier to version 2.5.0 ([aa64d65](https://github.com/kikobeats/nodengine/commit/aa64d65))
+
+
+
 <a name="3.2.3"></a>
 ## 3.2.3 (2018-01-21)
 
