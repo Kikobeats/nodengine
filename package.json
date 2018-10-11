@@ -43,6 +43,9 @@
   "engines": {
     "node": ">= 0.10"
   },
+  "files": [
+    "bin"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "lint": "standard",
