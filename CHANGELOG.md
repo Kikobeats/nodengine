@@ -1,3 +1,10 @@
+<a name="3.2.5"></a>
+## 3.2.5 (2019-03-27)
+
+* fix(package): update semver to version 6.0.0 ([ee17422](https://github.com/kikobeats/nodengine/commit/ee17422))
+
+
+
 <a name="3.2.4"></a>
 ## 3.2.4 (2018-10-11)
 
