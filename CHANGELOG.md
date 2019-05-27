@@ -1,3 +1,10 @@
+<a name="3.3.1"></a>
+## 3.3.1 (2019-05-27)
+
+* fix: test condition need a cb ([8b7435a](https://github.com/kikobeats/nodengine/commit/8b7435a))
+
+
+
 <a name="3.3.0"></a>
 # 3.3.0 (2019-05-27)
 
