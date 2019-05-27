@@ -17,35 +17,35 @@ function nvmCommand (maxSatisfyVersion, currentVersion) {
 
 function createSwitcher (maxSatisfyVersion, currentVersion) {
   var binaries = {
-    nvm: {
-      cmd: process.env.SHELL,
-      args: ['-c', 'source $NVM_DIR/nvm.sh; ' + nvmCommand(maxSatisfyVersion, currentVersion)]
-    },
-
     n: {
       cmd: 'n',
       args: [maxSatisfyVersion]
+    },
+    nvm: {
+      cmd: process.env.SHELL,
+      args: ['-c', 'source $NVM_DIR/nvm.sh; ' + nvmCommand(maxSatisfyVersion, currentVersion)]
     }
   }
 
   return {
     getBin: function (cb) {
       var binariesNames = Object.keys(binaries)
+      var index = 0
       var bin
 
-      function getBin (next) {
-        var binName = binariesNames.pop()
+      function getBin (cb) {
+        var binName = binariesNames[index++]
         which(binName, function (err) {
           if (!err) bin = binName
-          return next()
+          return cb()
         })
       }
 
-      function whileCondition () {
-        return !bin && binariesNames.length !== 0
+      function test (cb) {
+        return cb(null, !bin && index < binariesNames.length)
       }
 
-      doWhilst(getBin, whileCondition, function (err) {
+      doWhilst(getBin, test, function (err) {
         return cb(err, bin)
       })
     },
