@@ -1,3 +1,13 @@
+<a name="3.3.0"></a>
+# 3.3.0 (2019-05-27)
+
+* fix(package): update async to version 3.0.1 ([ad45a4b](https://github.com/kikobeats/nodengine/commit/ad45a4b))
+* fix(package): update semver to version 6.1.0 ([3ffdff3](https://github.com/kikobeats/nodengine/commit/3ffdff3))
+* fix(package): update update-notifier to version 2.6.0 ([741dd43](https://github.com/kikobeats/nodengine/commit/741dd43))
+* Update dependencies ([a42e446](https://github.com/kikobeats/nodengine/commit/a42e446))
+
+
+
 <a name="3.2.5"></a>
 ## 3.2.5 (2019-03-27)
 
