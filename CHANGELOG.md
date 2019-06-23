@@ -1,3 +1,12 @@
+<a name="3.3.2"></a>
+## 3.3.2 (2019-06-23)
+
+* fix(package): update async to version 3.1.0 ([26ac9b9](https://github.com/kikobeats/nodengine/commit/26ac9b9))
+* fix(package): update configstore to version 5.0.0 ([0baa337](https://github.com/kikobeats/nodengine/commit/0baa337))
+* docs: better copy ([406d48b](https://github.com/kikobeats/nodengine/commit/406d48b))
+
+
+
 <a name="3.3.1"></a>
 ## 3.3.1 (2019-05-27)
 
