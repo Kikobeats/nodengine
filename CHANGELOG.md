@@ -1,3 +1,11 @@
+<a name="3.3.3"></a>
+## 3.3.3 (2019-07-02)
+
+* build: add automate release ([6dff8d1](https://github.com/kikobeats/nodengine/commit/6dff8d1))
+* fix(package): update semver to version 6.2.0 ([799ffbc](https://github.com/kikobeats/nodengine/commit/799ffbc))
+
+
+
 <a name="3.3.2"></a>
 ## 3.3.2 (2019-06-23)
 
