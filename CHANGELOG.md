@@ -1,3 +1,46 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 3.4.0 (2020-01-20)
+
+
+### Features
+
+* **migrate:** don't reinstall if same version ([53d942f](https://github.com/kikobeats/nodengine/commit/53d942f4d538b9211ed972a37a4d08560d38e5a6))
+* **migrate:** pass current version to switcher ([ba5e34b](https://github.com/kikobeats/nodengine/commit/ba5e34be9eb2df92ad1081dae9ec914d7c741874))
+* **migrate:** use current version to reinstall ([0dc89ac](https://github.com/kikobeats/nodengine/commit/0dc89acecd7089d2cd725818ceb4ec1b27c70d85))
+
+
+### Bug Fixes
+
+* **migrate:** fix lint errors ([83166dc](https://github.com/kikobeats/nodengine/commit/83166dc697dd016ce624f4eca9e4efa8398c40e5))
+* **migrate:** fix the bad quote ([ece4390](https://github.com/kikobeats/nodengine/commit/ece43902285966ffdf27d16f6bdc97acd97f5517))
+* **migrate:** remove extra-line ([b4d9c3b](https://github.com/kikobeats/nodengine/commit/b4d9c3beecda6edcff44cc07f40a4d3471fc2c53))
+* **migrate:** rename the `rangeVersion` arg to `currentVersion` ([da47042](https://github.com/kikobeats/nodengine/commit/da47042a4b39b57ab99dff8e9720c674f8f9bc89))
+* **migrate:** use the right node version (without >=) ([69cfa40](https://github.com/kikobeats/nodengine/commit/69cfa400c4d14d450fee1f4e40f66b789c1db85d))
+* **package:** update async to version 2.6.0 ([801beff](https://github.com/kikobeats/nodengine/commit/801beffb8d196308a7e911a7bd2e7330c78ae62d))
+* **package:** update async to version 3.0.1 ([ad45a4b](https://github.com/kikobeats/nodengine/commit/ad45a4b1e80ae0e45c57844844952a45432024fa))
+* **package:** update async to version 3.1.0 ([26ac9b9](https://github.com/kikobeats/nodengine/commit/26ac9b9cbad52765e48f7129949f42bb4022599a))
+* **package:** update configstore to version 4.0.0 ([f59095b](https://github.com/kikobeats/nodengine/commit/f59095b28dfc2cf2624e46b3c7b2ed28485723c3))
+* **package:** update configstore to version 5.0.0 ([0baa337](https://github.com/kikobeats/nodengine/commit/0baa3371b72155da83da018489890c44457d9c36))
+* **package:** update meow to version 4.0.0 ([6a01d3f](https://github.com/kikobeats/nodengine/commit/6a01d3f04596641c0b84ea12961165ebe5df4541))
+* **package:** update meow to version 5.0.0 ([6c00b76](https://github.com/kikobeats/nodengine/commit/6c00b769e218bd5ba62b9b294dff8e5652cacb56))
+* **package:** update semver to version 5.4.0 ([4327824](https://github.com/kikobeats/nodengine/commit/4327824707cb0e871c56161357c4f1b93bbace4e))
+* **package:** update semver to version 5.5.0 ([e3c9bc0](https://github.com/kikobeats/nodengine/commit/e3c9bc0c334add9b01fd97d31bc73834d9445ff2))
+* **package:** update semver to version 5.6.0 ([65e7460](https://github.com/kikobeats/nodengine/commit/65e7460f84b6f7d548ac3f743085032c30365789))
+* **package:** update semver to version 6.0.0 ([ee17422](https://github.com/kikobeats/nodengine/commit/ee17422092733ec96b9de89fa45b08e4e043b5d0))
+* **package:** update semver to version 6.2.0 ([799ffbc](https://github.com/kikobeats/nodengine/commit/799ffbce92b3e1d9f50c042bdbb80e8ed1548c5a))
+* test condition need a cb ([8b7435a](https://github.com/kikobeats/nodengine/commit/8b7435afd46b7fb62a54cf160ac290f94c7c9c8a))
+* **package:** update semver to version 6.1.0 ([3ffdff3](https://github.com/kikobeats/nodengine/commit/3ffdff38de337713e50d8921cbe6a1b9360844ab))
+* **package:** update simple-get to version 2.7.0 ([d5d7f70](https://github.com/kikobeats/nodengine/commit/d5d7f7063f72d53e4965d2fa1c63f8a35a07e20f))
+* **package:** update simple-get to version 3.0.0 ([5f7904c](https://github.com/kikobeats/nodengine/commit/5f7904c8b2037aa610e1b0676311af830993cbf6))
+* **package:** update update-notifier to version 2.3.0 ([5e94178](https://github.com/kikobeats/nodengine/commit/5e9417894676263ecc0779975991a078c8f9ac73))
+* **package:** update update-notifier to version 2.4.0 ([cb5f685](https://github.com/kikobeats/nodengine/commit/cb5f685935781ba348693c9b0276783a67a2b33f))
+* **package:** update update-notifier to version 2.5.0 ([aa64d65](https://github.com/kikobeats/nodengine/commit/aa64d65fef9fd2035fd7af95afe4c598e5c68418))
+* **package:** update update-notifier to version 2.6.0 ([741dd43](https://github.com/kikobeats/nodengine/commit/741dd43424f0c64da290bc1f8b8fdf6765edc3fb))
+* **package:** update which to version 1.3.0 ([ff50ff5](https://github.com/kikobeats/nodengine/commit/ff50ff507e8257222ae510be8b4898790d370f76))
+
 <a name="3.3.3"></a>
 ## 3.3.3 (2019-07-02)
 
@@ -249,6 +292,3 @@
 * first commit ([40fb238](https://github.com/kikobeats/nodengine/commit/40fb238))
 * Fix n command ([c41299a](https://github.com/kikobeats/nodengine/commit/c41299a))
 * Release 0.1.0 ([6b2f04e](https://github.com/kikobeats/nodengine/commit/6b2f04e))
-
-
-
