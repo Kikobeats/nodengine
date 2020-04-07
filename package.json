@@ -11,6 +11,12 @@
     "name": "Kiko Beats",
     "url": "https://github.com/Kikobeats"
   },
+  "contributors": [
+    {
+      "name": "Kevin Ross",
+      "email": "kevin.ross@alienfast.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kikobeats/nodengine.git"
