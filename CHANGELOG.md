@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.2](https://github.com/kikobeats/nodengine/compare/v3.4.1...v3.4.2) (2020-04-14)
+
 ### [3.4.1](https://github.com/kikobeats/nodengine/compare/v3.4.0...v3.4.1) (2020-04-07)
 
 ## 3.4.0 (2020-01-20)
