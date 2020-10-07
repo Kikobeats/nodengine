@@ -39,7 +39,6 @@
     "meow": "~7.1.0",
     "semver": "~7.3.0",
     "simple-get": "~4.0.0",
-    "update-notifier": "~5.0.0",
     "which": "~2.0.2"
   },
   "devDependencies": {

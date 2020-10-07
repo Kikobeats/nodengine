@@ -3,8 +3,6 @@
 var pkg = require('../package.json')
 var FIVE_DAYS = 1000 * 60 * 60 * 24 * 5
 
-require('update-notifier')({ pkg: pkg }).notify()
-
 var Configstore = require('configstore')
 var configName = 'update-notifier-' + pkg.name
 var config = new Configstore(configName, { nodeVersions: [] })
