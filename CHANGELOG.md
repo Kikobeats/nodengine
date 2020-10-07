@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.8](https://github.com/kikobeats/nodengine/compare/v3.4.7...v3.4.8) (2020-10-07)
+
+
+### Bug Fixes
+
+* remove update notifier ([10566cb](https://github.com/kikobeats/nodengine/commit/10566cbb7080f7e3b85f0212111625df41f9e4cc)), closes [#66](https://github.com/kikobeats/nodengine/issues/66)
+
 ### [3.4.7](https://github.com/kikobeats/nodengine/compare/v3.4.6...v3.4.7) (2020-09-30)
 
 ### [3.4.6](https://github.com/kikobeats/nodengine/compare/v3.4.5...v3.4.6) (2020-08-11)
