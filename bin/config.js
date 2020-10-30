@@ -1,24 +1,24 @@
 'use strict'
 
-var pkg = require('../package.json')
-var FIVE_DAYS = 1000 * 60 * 60 * 24 * 5
+const pkg = require('../package.json')
+const FIVE_DAYS = 1000 * 60 * 60 * 24 * 5
 
-var Configstore = require('configstore')
-var configName = 'update-notifier-' + pkg.name
-var config = new Configstore(configName, { nodeVersions: [] })
-var fetchCheckInterval = process.env.NODENGINE_INTERVAL || FIVE_DAYS
+const Configstore = require('configstore')
+const configName = 'update-notifier-' + pkg.name
+const config = new Configstore(configName, { nodeVersions: [] })
+const fetchCheckInterval = process.env.NODENGINE_INTERVAL || FIVE_DAYS
 
-var waterfall = require('async').waterfall
-var fetch = require('./fetch')
+const waterfall = require('async').waterfall
+const fetch = require('./fetch')
 
 function loadConfig (cb) {
-  var tasks = [
+  const tasks = [
     function checkCache (next) {
-      var currentNodeVersions = config.get('nodeVersions')
-      var lastFetchCheck = config.get('lastFetchCheck')
-      var hasVersions = currentNodeVersions.length
-      var now = Date.now()
-      var isCacheValid = now - lastFetchCheck < fetchCheckInterval
+      const currentNodeVersions = config.get('nodeVersions')
+      const lastFetchCheck = config.get('lastFetchCheck')
+      const hasVersions = currentNodeVersions.length
+      const now = Date.now()
+      const isCacheValid = now - lastFetchCheck < fetchCheckInterval
 
       if (hasVersions && isCacheValid) return next(null, currentNodeVersions)
 

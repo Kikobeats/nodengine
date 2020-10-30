@@ -1,11 +1,11 @@
 'use strict'
 
-var spawn = require('child_process').spawn
-var doWhilst = require('async').doWhilst
-var which = require('./which')
+const spawn = require('child_process').spawn
+const doWhilst = require('async').doWhilst
+const which = require('./which')
 
 function nvmCommand (maxSatisfyVersion, currentVersion) {
-  var cmd = ''
+  let cmd = ''
   cmd += 'nvm install '
   cmd += maxSatisfyVersion
   if (currentVersion !== maxSatisfyVersion) {
@@ -16,7 +16,7 @@ function nvmCommand (maxSatisfyVersion, currentVersion) {
 }
 
 function createSwitcher (maxSatisfyVersion, currentVersion) {
-  var binaries = {
+  const binaries = {
     n: {
       cmd: 'n',
       args: [maxSatisfyVersion]
@@ -29,12 +29,12 @@ function createSwitcher (maxSatisfyVersion, currentVersion) {
 
   return {
     getBin: function (cb) {
-      var binariesNames = Object.keys(binaries)
-      var index = 0
-      var bin
+      const binariesNames = Object.keys(binaries)
+      let index = 0
+      let bin
 
       function getBin (cb) {
-        var binName = binariesNames[index++]
+        const binName = binariesNames[index++]
         which(binName, function (err) {
           if (!err) bin = binName
           return cb()
