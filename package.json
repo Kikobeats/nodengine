@@ -2,7 +2,7 @@
   "name": "nodengine",
   "description": "Node.js versions switcher based on engines at `package.json`.",
   "homepage": "https://nicedoc.io/Kikobeats/nodengine",
-  "version": "3.4.8",
+  "version": "3.4.9",
   "bin": {
     "nodengine": "bin/index.js"
   },

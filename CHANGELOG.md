@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.9](https://github.com/kikobeats/nodengine/compare/v3.4.8...v3.4.9) (2020-10-30)
+
+
+### Bug Fixes
+
+* linter ([eca5539](https://github.com/kikobeats/nodengine/commit/eca5539865c525ac19a65b0cab3b43ee78b5ebb2))
+
 ### [3.4.8](https://github.com/kikobeats/nodengine/compare/v3.4.7...v3.4.8) (2020-10-07)
 
 
