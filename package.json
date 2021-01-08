@@ -13,8 +13,24 @@
   },
   "contributors": [
     {
+      "name": "Clément Prévot",
+      "email": "clement.prevot@gmail.com"
+    },
+    {
       "name": "Kevin Ross",
       "email": "kevin.ross@alienfast.com"
+    },
+    {
+      "name": "Clément PREVOT",
+      "email": "clement@lumapps.com"
+    },
+    {
+      "name": "Randy Schott",
+      "email": "randyschott@gmail.com"
+    },
+    {
+      "name": "Gabo Esquivel",
+      "email": "contact@gaboesquivel.com"
     }
   ],
   "repository": {
