@@ -7,6 +7,17 @@ function fetch (cb) {
   get.concat(URL, function (err, res, data) {
     if (err) return cb(err)
     const nodeVersions = data.toString().split('\n')
+
+    // When the semver.io service is down, it returns an HTML error page.
+    // For example, when in maintenance mode, we get a Heroku maintenance page.
+    if (nodeVersions[0].includes('html')) {
+      return cb(
+        new Error(
+          `Unable to fetch NodeJS versions from "${URL}" (maybe it's down or under maintenance)`
+        )
+      )
+    }
+
     return cb(null, nodeVersions)
   })
 }

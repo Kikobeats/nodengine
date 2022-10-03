@@ -14,8 +14,18 @@ function _switch (nodeVersion) {
     function getSwitcher (versions, next) {
       const currentVersion = process.versions.node
       const maxSatisfyVersion = semver.maxSatisfying(versions, nodeVersion)
-      const switcher = createSwitcher(maxSatisfyVersion, currentVersion)
 
+      // If the cache of nodes versions is corrupted (e.g. with an HTML error
+      // page) or empty, we'll have a `null` version here. So instad of
+      // displaying the not so clear error message of N/NVM, we'll output a more
+      // explicit one.
+      if (maxSatisfyVersion === null) {
+        return next(
+          new Error(`No maximum satisfying version found for "${nodeVersion}"`)
+        )
+      }
+
+      const switcher = createSwitcher(maxSatisfyVersion, currentVersion)
       switcher.getBin(function (err, bin) {
         return next(err, switcher, bin)
       })
