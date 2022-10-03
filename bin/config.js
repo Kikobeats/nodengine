@@ -16,7 +16,9 @@ function loadConfig (cb) {
     function checkCache (next) {
       const currentNodeVersions = config.get('nodeVersions')
       const lastFetchCheck = config.get('lastFetchCheck')
-      const hasVersions = currentNodeVersions.length
+      const hasVersions =
+        // Ignore corrupted cached versions (due to HTML error page).
+        currentNodeVersions.length && !currentNodeVersions[0].includes("html");
       const now = Date.now()
       const isCacheValid = now - lastFetchCheck < fetchCheckInterval
 
@@ -27,6 +29,10 @@ function loadConfig (cb) {
           // no internet!
           if (err.code === 'ENOTFOUND') return next(null, currentNodeVersions)
           return next(err)
+        }
+        
+        if (!nodeVersions || nodeVersions.length === 0) {
+          return next(new Error('No NodeJS versions found!'))
         }
 
         config.set('nodeVersions', nodeVersions)
