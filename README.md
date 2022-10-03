@@ -8,11 +8,7 @@
   <br>
   <br>
   <img src="https://img.shields.io/github/tag/Kikobeats/nodengine.svg?style=flat-square" alt="Last version">
-<a href="https://travis-ci.org/Kikobeats/nodengine"><img src="http://img.shields.io/travis/Kikobeats/nodengine/master.svg?style=flat-square" alt="Build Status"></a>
-<a href="https://david-dm.org/Kikobeats/nodengine"><img src="http://img.shields.io/david/Kikobeats/nodengine.svg?style=flat-square" alt="Dependency status"></a>
-<a href="https://david-dm.org/Kikobeats/nodengine#info=devDependencies"><img src="http://img.shields.io/david/dev/Kikobeats/nodengine.svg?style=flat-square" alt="Dev Dependencies Status"></a>
-<a href="https://www.npmjs.org/package/nodengine"><img src="http://img.shields.io/npm/dm/nodengine.svg?style=flat-square" alt="NPM Status"></a>
-<a href="https://paypal.me/Kikobeats"><img src="https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square" alt="Donate"></a>
+  <a href="https://www.npmjs.org/package/nodengine"><img src="http://img.shields.io/npm/dm/nodengine.svg?style=flat-square" alt="NPM Status"></a>
   <br>
 </h1>
 
