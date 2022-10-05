@@ -11,9 +11,9 @@ function _switch (nodeVersion) {
     function loadConfig (next) {
       return config(next)
     },
-    function getSwitcher (versions, next) {
+    function getSwitcher (nodeVersions, next) {
       const currentVersion = process.versions.node
-      const maxSatisfyVersion = semver.maxSatisfying(versions, nodeVersion)
+      const maxSatisfyVersion = semver.maxSatisfying(nodeVersions, nodeVersion)
 
       // If the cache of nodes versions is corrupted (e.g. with an HTML error
       // page) or empty, we'll have a `null` version here. So instad of
