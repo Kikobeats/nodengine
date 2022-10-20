@@ -1,7 +1,7 @@
 'use strict'
 
-const spawn = require('child_process').spawn
-const doWhilst = require('async').doWhilst
+const { spawn } = require('child_process')
+const { doWhilst } = require('async')
 const which = require('./which')
 
 function nvmCommand (maxSatisfyVersion, currentVersion) {
@@ -23,19 +23,23 @@ function createSwitcher (maxSatisfyVersion, currentVersion) {
     },
     nvm: {
       cmd: process.env.SHELL,
-      args: ['-c', 'source $NVM_DIR/nvm.sh; ' + nvmCommand(maxSatisfyVersion, currentVersion)]
+      args: [
+        '-c',
+        'source $NVM_DIR/nvm.sh; ' +
+          nvmCommand(maxSatisfyVersion, currentVersion)
+      ]
     }
   }
 
   return {
-    getBin: function (cb) {
+    getBin: cb => {
       const binariesNames = Object.keys(binaries)
       let index = 0
       let bin
 
       function getBin (cb) {
         const binName = binariesNames[index++]
-        which(binName, function (err) {
+        which(binName, err => {
           if (!err) bin = binName
           return cb()
         })
@@ -45,12 +49,10 @@ function createSwitcher (maxSatisfyVersion, currentVersion) {
         return cb(null, !bin && index < binariesNames.length)
       }
 
-      doWhilst(getBin, test, function (err) {
-        return cb(err, bin)
-      })
+      doWhilst(getBin, test, err => cb(err, bin))
     },
 
-    spawn: function (bin) {
+    spawn: bin => {
       bin = binaries[bin]
       return spawn(bin.cmd, bin.args, { stdio: 'inherit' })
     }

@@ -1,43 +1,41 @@
 'use strict'
 
 const pkg = require('../package.json')
-const FIVE_DAYS = 1000 * 60 * 60 * 24 * 5
+const FIVE_DAYS_IN_MS = 1000 * 60 * 60 * 24 * 5
 
 const Configstore = require('configstore')
 const configName = 'update-notifier-' + pkg.name
 const config = new Configstore(configName, { nodeVersions: [] })
-const fetchCheckInterval = process.env.NODENGINE_INTERVAL || FIVE_DAYS
+const fetchCheckInterval = process.env.NODENGINE_INTERVAL || FIVE_DAYS_IN_MS
 
-const waterfall = require('async').waterfall
+const { waterfall } = require('async')
 const fetch = require('./fetch')
+
+const has = array => array.length > 0
 
 function loadConfig (cb) {
   const tasks = [
     function checkCache (next) {
-      const currentNodeVersions = config.get('nodeVersions')
+      const nodeVersions = config.get('nodeVersions')
       const lastFetchCheck = config.get('lastFetchCheck')
-      const hasVersions =
-        // Ignore corrupted cached versions (due to HTML error page).
-        currentNodeVersions.length && !currentNodeVersions[0].includes("html");
+      const hasVersions = has(nodeVersions)
       const now = Date.now()
       const isCacheValid = now - lastFetchCheck < fetchCheckInterval
+      const falback = () => next(null, nodeVersions)
 
-      if (hasVersions && isCacheValid) return next(null, currentNodeVersions)
+      if (hasVersions && isCacheValid) return falback()
 
-      fetch(function (err, nodeVersions) {
+      fetch((err, newNodeVersions) => {
         if (err) {
           // no internet!
-          if (err.code === 'ENOTFOUND') return next(null, currentNodeVersions)
+          if (err.code === 'ENOTFOUND') return falback()
           return next(err)
         }
-        
-        if (!nodeVersions || nodeVersions.length === 0) {
-          return next(new Error('No NodeJS versions found!'))
-        }
 
-        config.set('nodeVersions', nodeVersions)
+        if (has(newNodeVersions)) return falback()
+        config.set('nodeVersions', newNodeVersions)
         config.set('lastFetchCheck', now)
-        return next(null, nodeVersions)
+        return next(null, newNodeVersions)
       })
     }
   ]

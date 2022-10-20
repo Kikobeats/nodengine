@@ -1,18 +1,15 @@
-# nodengine
-
-<h1 align="center">
+<h2 align="center">
   <br>
   <img src="http://g.recordit.co/pMGKmq4ycR.gif" alt="nodengine">
   <br>
-  Automagically switch your Node.js version based on `package.json`
   <br>
-  <br>
+  <p>Automagically switch your Node.js version</p>
+  <p>based on `package.json`</p>
   <img src="https://img.shields.io/github/tag/Kikobeats/nodengine.svg?style=flat-square" alt="Last version">
   <a href="https://www.npmjs.org/package/nodengine"><img src="http://img.shields.io/npm/dm/nodengine.svg?style=flat-square" alt="NPM Status"></a>
   <br>
-</h1>
-
-<br>
+  <br>
+</h2>
 
 **nodengine** is an automatic way to switch your Node.js version per project reading `engines` fields at `package.json`.
 

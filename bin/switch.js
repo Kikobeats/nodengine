@@ -1,16 +1,13 @@
 'use strict'
 
-const waterfall = require('async').waterfall
+const { waterfall } = require('async')
 const semver = require('semver')
 
 function _switch (nodeVersion) {
   const createSwitcher = require('./switcher')
-  const config = require('./config')
 
   const tasks = [
-    function loadConfig (next) {
-      return config(next)
-    },
+    require('./config'),
     function getSwitcher (nodeVersions, next) {
       const currentVersion = process.versions.node
       const maxSatisfyVersion = semver.maxSatisfying(nodeVersions, nodeVersion)
@@ -26,13 +23,11 @@ function _switch (nodeVersion) {
       }
 
       const switcher = createSwitcher(maxSatisfyVersion, currentVersion)
-      switcher.getBin(function (err, bin) {
-        return next(err, switcher, bin)
-      })
+      switcher.getBin((err, bin) => next(err, switcher, bin))
     }
   ]
 
-  waterfall(tasks, function (err, switcher, bin) {
+  waterfall(tasks, (err, switcher, bin) => {
     if (err) throw err
     if (bin) return switcher.spawn(bin)
   })
