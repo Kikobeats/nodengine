@@ -25,12 +25,16 @@
       "email": "clement@lumapps.com"
     },
     {
-      "name": "Randy Schott",
-      "email": "randyschott@gmail.com"
+      "name": "Clément PRÉVOT",
+      "email": "clement.prevot@backmarket.com"
     },
     {
       "name": "Gabo Esquivel",
       "email": "contact@gaboesquivel.com"
+    },
+    {
+      "name": "Randy Schott",
+      "email": "randyschott@gmail.com"
     }
   ],
   "repository": {
@@ -65,9 +69,9 @@
     "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
-    "simple-git-hooks": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
+    "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-version": "latest"
   },
@@ -97,13 +101,13 @@
       "@commitlint/config-conventional"
     ]
   },
-  "simple-git-hooks": {
-  "commit-msg": "npx commitlint --edit",
-  "pre-commit": "npx nano-staged"
-},
   "nano-staged": {
     "package.json": [
       "finepack"
     ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx nano-staged"
   }
 }
