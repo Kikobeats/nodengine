@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/kikobeats/nodengine/compare/v3.4.11...v3.5.0) (2022-10-20)
+
+
+### Bug Fixes
+
+* handle semver.io being down ([61c68de](https://github.com/kikobeats/nodengine/commit/61c68de81fb66270ab7af0494608d20f545b7550))
+* use nodejs.org to retrieve the versions list ([36703b6](https://github.com/kikobeats/nodengine/commit/36703b6ad70bd8cced79b89e77bec2de077983f0))
+
 ### [3.4.11](https://github.com/kikobeats/nodengine/compare/v3.4.10...v3.4.11) (2021-01-08)
 
 ### [3.4.10](https://github.com/kikobeats/nodengine/compare/v3.4.9...v3.4.10) (2020-12-25)
