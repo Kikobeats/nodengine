@@ -1,14 +1,12 @@
 'use strict'
 
 const get = require('simple-get')
-const URL = 'https://semver.io/node/versions'
+const URL = 'https://nodejs.org/dist/index.json'
 
-function fetch (cb) {
-  get.concat(URL, function (err, res, data) {
+module.exports = cb =>
+  get.concat(URL, (err, res, data) => {
     if (err) return cb(err)
-    const nodeVersions = data.toString().split('\n')
+    const payload = JSON.parse(data)
+    const nodeVersions = payload.map(({ version }) => version.replace(/^v/, ''))
     return cb(null, nodeVersions)
   })
-}
-
-module.exports = fetch

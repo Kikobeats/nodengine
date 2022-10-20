@@ -1,23 +1,14 @@
-When you run the command, automagically it switches your node runtime
-based in the `engines.node` field declared at `package.json`
-of the project.
+Environment variables
 
-If the `package.json` or `engines.node` doesn't exists, nothing happens.
-
-Usage
-  $ nodengine
-
-Flags
   NODENGINE_INTERVAL
+
     Local cache for keep a list of all node versions to be resolved.
 
     The list, by default, is fetched after 5 days.
 
     You can setup a custom intervaling passing a milliseconds number.
     For example, if you want to force download the list of all node
-    versions just pass a 0:
-
-    NODENGINE_INTERVAL=0 nodengine
+    versions just pass a 0.
 
 Examples
   $ nodengine

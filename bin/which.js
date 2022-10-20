@@ -5,10 +5,9 @@ const NVM_DIR = process.env.NVM_DIR
 
 function which (bin, cb) {
   const binaries = {
-    n: function () { return _which(bin, cb) },
-    nvm: function () { return cb(NVM_DIR ? null : 'nope') }
+    n: () => _which(bin, cb),
+    nvm: () => cb(NVM_DIR ? null : 'nope')
   }
-
   return binaries[bin]()
 }
 
